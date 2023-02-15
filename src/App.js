@@ -11,13 +11,14 @@ function App() {
   return (
     <main>
       <input
+        value={inputValue}
         type="text"
         onChange={(event) => {
-          console.log(event.target.value);
+          setInputValue(event.target.value);
         }}
       />
       <button onClick={addItem}>Add</button>
-      <TodoBoard />
+      <TodoBoard todoList={todoList} />
     </main>
   );
 }
